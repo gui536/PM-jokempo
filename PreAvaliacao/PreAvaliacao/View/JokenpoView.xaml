@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PreAvaliacao.View.JokenpoView"
+             Title="JokenpoView">
+    <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+        <Label
+               Text="JO KEN PO"
+               Style="{StaticResource Headline}"
+                SemanticProperties.Hint="JO KEN PO"
+            />
+
+        <Label
+            Text="{Binding result}"
+            x:Name="Result"
+            Style="{StaticResource SubHeadline}"/>
+
+        <Picker
+                x:Name="PickerDecider"
+                Title="Selecione sua jogada"
+                SelectedItem="{Binding Escolha}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Pedra</x:String>
+                    <x:String>Papel</x:String>
+                    <x:String>Tesoura</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+
+        <Button
+                x:Name="BtnPlay"
+                Text="Jogar"
+            Command="{Binding JogarCommand}"
+                SemanticProperties.Hint="Jogar"
+                />
+
+        <Label
+            Text="{Binding PontuacaoJogador}"/>
+
+        <Label
+            Text="{Binding PontuacaoOponente}"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

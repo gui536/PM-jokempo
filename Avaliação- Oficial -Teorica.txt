@@ -1,0 +1,66 @@
+Pré-Avaliação:
+
+JOAO PEDRO
+MATHEUS BERNARDINO
+
+Escrita:
+Para que serve o MVVM?
+O MVVM é um padrão de desenvolvimente que ajuda a separar a parte lógica com a parte visual do código
+
+O que é o MVVM Community Toolkit?
+É uma biblioteca/ferramenta que simplifica o uso do MVVM
+
+Para quê serve o arquivo appShell? Como adicionar uma view para ser exibida no lugar da main page?
+O appShell serve para definir a estrutura de navegação do aplicativo. Para adicionar a view criada como content template no appShell 
+
+Para que serve <TabBar> no appshell?
+A  <TabBar> armazena itens no menu lateral ou em uma barra inferior de guias
+
+Em aula, como instalamos pacotes usando Nuget no C#?
+Botão direito na solution, manage nutget packages for solution, browse, pesquisa por community toolkit e instala            <Picker
+                x:Name="PickerDecider"
+                Title="Selecione sua jogada">
+                
+                <Picker.ItemSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Pedra</x:String>
+                        <x:String>Papel</x:String>
+                        <x:String>Tesoura</x:String>
+                    </x:Array>
+                </Picker.ItemSource>
+            </Picker> 
+
+O que é o Binding? Em que arquivo criamos os bindings?
+Binding é a conexão da view e a viewModel. Normalmente os bindings são criados nos arquivos XAML das Views
+
+O que é um Command?
+
+
+O que é o Binding context? Escreva como associamos o binding context a classe ViewModel
+Binding context é o que determina a fonte dos dados para o binding. Para associar o binding context a classe viewModel
+
+Para que serve a ViewModel?
+a ViewModel serve para unir os conceitos do View e do Model, ela encapsula a lógica de apresentação
+
+Qual a diferença entre construir uma view no MVVM e fora do MVVM?
+
+
+O que quer dizer que um atributo é uma propriedade observável? [Observable Propriety]?
+Uma propriedade observável é uma propriedade que notifica os seus listeners quando seu valor muda
+
+Quando criamos uma observable Property, que cuidado devemos ter com os atributos?
+Devemos ter cuidado para notar se as notificações de mudança de valor estão sendo disparadas corretamente, o que geralmente é feito pelo MVVM
+
+
+Prática:
+Crie uma classe que modele um usuário de umjogo de JoKenPo
+
+Desenhe uma interface que possibilita o usuário jogar Jo Ken Po contra o aplicativo
+
+Crie um método que permita que o usuário selecione Pedra, Papel ou Tesoura. Depois,faça um método que sorteie uma das opções parao oponente e as compare.
+
+Se o usuário ganhar, aumente 1 ponto em sua pontuação
+
+Quando ou usuário ou oponente chegar a 10 pontos, mostre na tela "_________ venceu"
+
+O aplicativo deve mostrar uma imagem que represente Pedra,Papel ou Tesoura para cada opção ou seleção feita pelo oponente.
