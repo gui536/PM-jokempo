@@ -3,14 +3,15 @@ using PreAvaliacao.Models;
 
 namespace PreAvaliacao.ViewModels;
 
-public class JokenpoViewModel : ContentPage
+//Classe não herda ContentPage, herda ObservableObject
+public partial class JokenpoViewModel : ObservableObject
 {
 
     [ObservableProperty]
     private string result;
 
     [ObservableProperty]
-    private string Escolha;
+    private string escolha;
 
     [ObservableProperty]
     private int pontuacaoJogador;
@@ -18,6 +19,10 @@ public class JokenpoViewModel : ContentPage
     [ObservableProperty]
     private int pontuacaoComputador;
 
+    //Implementar o construtor
+    //Implementar o jogar command
+
+    //Verificar o nome dos métodos
     public void Joagr()
     {
         Jogador1 jogador = new Jogador1();
